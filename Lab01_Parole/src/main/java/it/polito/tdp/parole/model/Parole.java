@@ -1,9 +1,7 @@
 package it.polito.tdp.parole.model;
 
-import java.util.ArrayList;
 import java.util.Collections;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 public class Parole {
 		
@@ -11,7 +9,7 @@ public class Parole {
 	
 	public Parole() {
 		lista = new LinkedList<String>();
-		//lista = new ArrayList<String>();
+		//lista = new ArrayList<String>(1);
 	}
 	
 	public void addParola(String p) {

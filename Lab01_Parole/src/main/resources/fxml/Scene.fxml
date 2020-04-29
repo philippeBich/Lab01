@@ -9,7 +9,7 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.VBox?>
 
-<BorderPane prefHeight="340.0" prefWidth="366.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="it.polito.tdp.parole.FXMLController">
+<BorderPane prefHeight="340.0" prefWidth="366.0" xmlns="http://javafx.com/javafx" xmlns:fx="http://javafx.com/fxml" fx:controller="it.polito.tdp.parole.FXMLController">
    <top>
       <Label text="Lab 1 - Lista di Parole" BorderPane.alignment="CENTER">
          <BorderPane.margin>
@@ -43,7 +43,7 @@
                   <Insets left="10.0" />
                </HBox.margin>
             </Button>
-            <TextArea fx:id="txtPerformance" prefHeight="57.0" prefWidth="200.0" promptText="perfromance...">
+            <TextArea fx:id="txtPerformance" prefHeight="57.0" prefWidth="200.0" promptText="performance...">
                <HBox.margin>
                   <Insets left="5.0" />
                </HBox.margin>

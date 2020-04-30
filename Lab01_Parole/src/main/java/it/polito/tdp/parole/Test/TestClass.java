@@ -1,6 +1,8 @@
 package it.polito.tdp.parole.Test;
 
 import java.util.ArrayList;
+import java.util.Collections;
+
 import it.polito.tdp.parole.model.Parole;
 
 public class TestClass {
@@ -11,27 +13,29 @@ public class TestClass {
 		double removeTime=0.0;
 		DAO dao = new DAO();
 		
-		ArrayList<String> elenco = new ArrayList<>(dao.getWords());
+		ArrayList<String> elenco = new ArrayList<>(dao.getWords());  //55713 parole
 		
 		for(String parola : elenco) {
 			double start = System.nanoTime();
-			par.addParola(parola);
+		//	par.addParola(parola);
 			double end = System.nanoTime();
 			addTime+=end-start;
 		}
 		
 		addTime=addTime/elenco.size();
 		
+		//Collections.sort(elenco, Collections.reverseOrder());
+		
 		for(String parola : elenco) {
 			double start = System.nanoTime();
-			par.removeParola(parola);
+		//	par.removeParola(parola);
 			double end = System.nanoTime();
 			removeTime+=end-start;
 		}
 		
 		removeTime=removeTime/elenco.size();
 		
-		System.out.println("TEMPO ADD (medio): " + addTime +" - TEMPO REMOVE (medio): " + removeTime +"\n");
+		System.out.println("TEMPO ADD (medio): " + addTime +"ns - TEMPO REMOVE (medio): " + removeTime +"ns\n");
 	}
 	
 	

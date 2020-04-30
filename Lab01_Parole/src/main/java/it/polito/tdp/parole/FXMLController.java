@@ -12,7 +12,7 @@ import javafx.scene.control.TextField;
 
 public class FXMLController {
 	
-	Parole elenco ;
+	Parole elenco;
 
     @FXML
     private ResourceBundle resources;
@@ -40,20 +40,6 @@ public class FXMLController {
 
     @FXML
     void doCancella(ActionEvent event) {
-    	
-    	String selected = txtResult.getSelectedText();
-    	double start = System.nanoTime();
-    	elenco.removeParola(selected);
-    	double stop = System.nanoTime();
-    	
-    	txtResult.clear();
-    	String result = "";
-    	for (String p:elenco.getElenco())
-    		result +=p + "\n";
-    	txtResult.setText(result);
-    	
-    	txtPerformance.clear();
-    	txtPerformance.setText("[REMOVE]: " + (stop - start)/1e9 + " seconds");
   	
     }
 
@@ -63,13 +49,13 @@ public class FXMLController {
     void doInsert(ActionEvent event) {
     	
     	double start = System.nanoTime();
-    	elenco.addParola(txtParola.getText());
+    	//elenco.addParola(txtParola.getText());
     	double stop = System.nanoTime();
     	
     	txtResult.clear();
     	String result = "";
-    	for (String p:elenco.getElenco())
-    		result +=p + "\n";
+    	//for (String p:elenco.getElenco())
+    	//	result +=p + "\n";
     	txtResult.setText(result);
     	
     	txtPerformance.clear();
@@ -81,9 +67,7 @@ public class FXMLController {
 
     @FXML
     void doReset(ActionEvent event) {
-    	elenco.reset();
-    	txtResult.clear();
-    	txtPerformance.clear();
+    	
     }
 
     @FXML
